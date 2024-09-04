@@ -35,8 +35,6 @@ public class Calculator {
             sc.close();
         }
         
-
-
         //Driver code
         public static void main(String[] args) {
 

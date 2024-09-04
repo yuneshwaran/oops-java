@@ -16,8 +16,8 @@ public class bankAccount {
         this.balance =0;
         this.accnum = rand.nextInt(10000);
     }
-    bankAccount(String name){
-        this.name = name;
+    bankAccount(String n){
+        this.name = n;
         Random rand = new Random();
         this.balance =0;
         this.accnum = rand.nextInt(10000);
@@ -47,7 +47,6 @@ public class bankAccount {
     public static void main(String[] args) {
 
         bankAccount p1 = new bankAccount("Yunesh");
-        //bankAccount p2 = new bankAccount("Yunesh");
         boolean ch = true;
         Scanner sc = new Scanner(System.in);
         while (ch){
