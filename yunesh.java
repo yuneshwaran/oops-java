@@ -1,7 +1,9 @@
 package oops;
 
-public class Main {
+public class yunesh {
     public static void main(String[] args) {
-        
+    
+        System.out.print("\uDF1F");
+
     }
 }

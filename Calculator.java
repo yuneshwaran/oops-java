@@ -44,6 +44,7 @@ public class Calculator {
             System.out.print("Enter your choice : ");
             int x = sc.nextInt();
             c.calculator(x);
+            sc.close();
         }
 
     }
