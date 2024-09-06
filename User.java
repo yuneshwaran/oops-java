@@ -32,6 +32,8 @@ public class User {
             User u1 = new User("Alpaca");
             u1.setMailid("alpacagmail.com");
             System.out.println(u1.getMailid());
+            u1.setMailid("alpaca@gmail.com");
+            System.out.println(u1.getMailid());
             
         }
     }

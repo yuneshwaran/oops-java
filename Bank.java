@@ -58,7 +58,7 @@ public class Bank {
         boolean ch = true;
         Scanner sc = new Scanner(System.in);
         while (ch){
-            System.out.print("DEBIT -1 \nCREDIT  -2\nBALANCE -3\nQUIT    -4\n");
+            System.out.print("DEBIT -1 \nCREDIT  -2\nBALANCE -3\nQUIT -4\n");
             int x = sc.nextInt();
             if (x==4){
                 ch = false;
