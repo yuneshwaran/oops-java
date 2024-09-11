@@ -1,4 +1,3 @@
-package oops;
 
 // 2.Create a Student class with the attributes:name (String),id (int),grades (an array of double)
 // Methods:
@@ -27,6 +26,11 @@ public class Student {
             i++;
         }
         
+    }
+    public void display(){
+        System.out.println("Student name :"+name);
+        System.out.println("Student id: "+id);
+
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,3 @@
-package oops;
 
 // 7.Write a class Counter with an integer attribute count. 
 // Implement methods to increment and decrement the count. Create an instance,\

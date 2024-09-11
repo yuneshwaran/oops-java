@@ -1,19 +1,20 @@
-package oops;
 
 import java.util.Random;
 import java.util.Scanner;
+
 
 public class Bank {
 
     String name;
     int balance;
     int accnum;
+    Random rand = new Random();
 
     //constructors
 
     Bank (){
         this.name = "NULL";
-        Random rand = new Random();
+        
         this.balance =0;
         this.accnum = rand.nextInt(10000);
     }

@@ -1,4 +1,3 @@
-package oops;
 
 //9. Create a class User with an attribute email. Implement a method is_valid_email() that checks 
 //if the email contains an "@" symbol. Instantiate a User object and validate the email.

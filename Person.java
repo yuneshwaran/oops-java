@@ -1,9 +1,3 @@
-package oops;
-
-//5.Write a class called Person that has attributes name and age. 
-//Use a constructor to initialize these attributes. Include a method greet() 
-//that prints a greeting message using the person's name.
-
 
 public class Person {
     

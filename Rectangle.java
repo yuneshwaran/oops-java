@@ -1,4 +1,3 @@
-package oops;
 
 //6.Define a class Rectangle with attributes width and height. Add a method area() 
 //that returns the area of the rectangle. Create an instance and call the area() method.

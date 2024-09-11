@@ -1,4 +1,3 @@
-package oops;
 
 // 4.Define a Movie class with attributes title (String), director (String), and year (int). 
 // Implement multiple constructors to initialize these attributes in different ways. 

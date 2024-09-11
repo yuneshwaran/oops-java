@@ -1,4 +1,3 @@
-package oops;
 
 //10. Write a class Employee with attributes name and salary. Implement a method increase_salary()
 // that takes a percentage and increases the salary accordingly. Create an instance and update the salary.
