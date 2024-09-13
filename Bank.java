@@ -21,13 +21,13 @@ public class Bank {
     //const overload
     Bank(String n){
         this.name = n;
-        Random rand = new Random();
+      //  Random rand = new Random();
         this.balance =0;
         this.accnum = rand.nextInt(10000);
     }
     Bank(String name,int initialdep){
         this.name = name;
-        Random rand = new Random();
+       // Random rand = new Random();
         this.balance = initialdep;
         this.accnum = rand.nextInt(10000);
     }

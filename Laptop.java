@@ -1,16 +1,14 @@
 
-//8.Create a class Laptop with attributes brand and price. Implement a method display_specs() 
-//that prints the brand and price. Instantiate a Laptop object and call display_specs().
-
 public class Laptop extends Computer{
 
     String model;
     int price;
 
     Laptop(String model, int price){
-        
-        System.out.println("Laptop Created");
+
         super();
+        System.out.println("Laptop Created");
+
         this.model = model;
         this.price = price;
 

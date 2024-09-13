@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Car {
     public int makeYear;
     public String brand;
@@ -64,4 +66,52 @@ public class Car {
             System.out.println("Car is not running!!");
     }
 
+}
+
+class sportsCar implements driveable,f1 {
+
+    boolean islocked,notdriveable;
+    int key,lock;
+    Random random;
+    String name;
+
+    sportsCar(String name){
+        
+        this.name = name;
+        notdriveable = false;
+        islocked = true;
+        this.key = this.lock = random.nextInt(10000);
+
+    }
+
+    public void drive(){
+        if (!islocked){
+            System.out.println("Car is driving ");
+        }
+        else System.out.println("Car is locked");
+    }
+
+    public void lock(){
+        this.islocked = true;
+    }
+
+    public void breakdown(){               
+        notdriveable = true;    
+    }
+
+    public void start(){
+        System.out.println("car is running very vast VROOM! VROOM! ");
+    }
+
+    public void spoiler(){
+        System.out.println("Car spoiler is up!");
+    }
+
+    public void carbonfiber(){
+        System.out.println("Added carbon fiber ");
+    }
+
+    public void aerodynamics(){
+        System.out.println("Speed ++");
+    }
 }

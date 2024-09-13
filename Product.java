@@ -1,63 +1,92 @@
-//8.Define a class Product with properties name and price, and a method display(). Create two subclasses Electronics 
-//and Clothing that extend Product and add additional properties (warrantyPeriod for Electronics and size for Clothing). 
-//Write a main method to create instances of both subclasses and display their details.
 
-public class Product {
+public abstract class Product {
+
     String name;
     int price;
+    int tax;
 
-    Product(String name,int price){
+    Product(String name, int price){
         this.name = name;
-        this.price= price;
+        this.price = price;
     }
 
-    public void details(){
-        System.out.println("Produt name : "+ this.name);
+    public abstract void details();
+
+    public abstract void calculate_price(int quantity);
+}
+
+class Digital_Product extends Product{
+
+
+    Digital_Product(String name, int price){
+        super(name,price);
+        this.tax = 10;
+    }
+    public  void details(){
+
+        System.out.println("Product name : "+this.name);
+        System.out.println("Type : Digital Product");
         System.out.println("Product cost : "+ this.price);
+
     }
+
+    public  void calculate_price(int a){
+
+
+        int tmp = price + ((price*tax)/100);
+        System.out.println("Digital product can be bought only once");
+        System.out.println("Product total cost (Incl. Tax) : "+ tmp );
+
+    }
+
 }
 
-class Electronics extends Product {
+class Physical_Product extends Product{
 
-    int warranty;
-    String type;
 
-    Electronics(String name, int price , String type,int warranty){
 
-        super(name, price);
-        this.type = type;
-        this.warranty = warranty;
+
+    Physical_Product(String name, int price){
+        super(name,price);
+        this.tax = 10;
 
     }
-    public void details(){
-        System.out.println("Electronics details");
-        super.details();
-        System.out.println("Warranty period : "+ this.warranty);
+
+    public  void details(){
+
+        System.out.println("---------------------------------");
+        System.out.println("Product name : "+this.name);
+        System.out.println("Type : Physical Product");
+        System.out.println("Product cost (Incl. Tax)  : "+ this.price);
+       // System.out.println("---------------------------------");
+
     }
-    
+
+    public  void calculate_price(int quantity ){
+
+        int tax = 15;
+        System.out.println("---------------------------------");
+        int tl_price = price + ((price*tax)/100);
+        tl_price *= quantity;
+
+        System.out.println("Product total cost (Incl. Tax) : " + tl_price );
+
+    }
+
 }
 
-class Clothing extends Product{
-
-    String theme;
-    int size;
-    Clothing(String name, int price , String theme,int size)
-    {
-        super(name, price);
-        this.theme = theme;
-        this.size = size;
-
-    }
-    public void details(){
-        System.out.println("Clothing details");
-        super.details();
-        System.out.println("Theme of cloth : "+ this.theme);
-        System.out.println("Size of cloth : "+this.size);
-    }
+class cart {
     public static void main(String[] args) {
-        Clothing c = new Clothing("shirt", 7, "formal", 30);
-        c.details();
-    }
+        
 
-    
+        Digital_Product Spotify = new Digital_Product("Spotify License", 200);
+        Spotify.calculate_price(1);
+        Spotify.details();
+
+        Physical_Product stick = new Physical_Product("Assault Rifle", 400);
+        stick.calculate_price(20);
+        stick.details();
+
+    }
 }
+
